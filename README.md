@@ -1,12 +1,6 @@
-extends Node
-
-### An uber basic game data controller ###
-### Built for keeping a handful of variables between levels ###
-### Set this script to AutoLoad in Project Settings ###
-
-# all variables we want to keep between levels can be stored in a dicitonary
-# access them from anywhere with User_Data.store.[YourVariable]
-# we can also back up the entire dictionary in one go
+An uber basic game data controller. Built for keeping a handful of variables between levels, set this script to AutoLoad in Project Setting. All variables we want to keep between levels can be stored in a dicitonary
+access them from anywhere with User_Data.store.[YourVariable]
+we can also back up the entire dictionary in one go
 
 var store = {
 	# you can add as many variables as you want here, they will all be saved
