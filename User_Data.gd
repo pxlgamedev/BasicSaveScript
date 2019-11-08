@@ -47,7 +47,7 @@ func save_game_state(var saveName):
 	# create a file object
 	var saveGame = File.new()
 	# create our save location
-	saveGame.open("res://Saves/"+saveName+".sve", File.WRITE)
+	saveGame.open("user://Saves/"+saveName+".sve", File.WRITE)
 	# write the data to disk
 	saveGame.store_line(to_json(store))
 	# close the file
@@ -60,11 +60,11 @@ func load_game_state(var saveName):
 	# create a file object
 	var loadGame = File.new()
 	# check that the file exists before trying to open it
-	if !loadGame.file_exists("res://Saves/"+saveName+".sve"):
+	if !loadGame.file_exists("user://Saves/"+saveName+".sve"):
 		print ("Abort! Abort! No file found...")
 		return
 	# time to read the data in our file
-	loadGame.open("res://Saves/"+saveName+".sve", File.READ)
+	loadGame.open("user://Saves/"+saveName+".sve", File.READ)
 	# use a new dictionary to parse through the file
 	var loadData = parse_json(loadGame.get_line())
 	# now simply overwrite store with the data from loadData
