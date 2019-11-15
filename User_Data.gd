@@ -15,13 +15,7 @@ var store = {
 	lives = 3
 	}
 
-	# we want a blank dictionary for use when starting a new game
-var newgame = {
-	}
-
 func _ready():
-	# make newgame a copy of our starting variables
-	newgame = store	# you could also load a specific json file instead
 	# check if a Saves directory exists.
 	var dir = Directory.new()
 	if !dir.dir_exists("user://Saves"):
